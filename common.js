@@ -32,7 +32,7 @@ module.exports = {
      * @param absolutePath
      * @returns {Promise}
      */
-    createDir: function createDir(absolutePath) {
+    createDir: function (absolutePath) {
         return new Promise((resolve, reject)=> {
             if (!fs.existsSync(absolutePath)) {
                 shell.mkdir('-p', absolutePath);
