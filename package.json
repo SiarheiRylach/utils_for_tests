@@ -1,0 +1,19 @@
+{
+  "name": "utils_for_tests",
+  "version": "1.0.0",
+  "description": "Some methods for tests",
+  "main": "common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiarheiRylach/utils_for_tests.git"
+  },
+  "author": "Siarhei Rylach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiarheiRylach/utils_for_tests/issues"
+  },
+  "homepage": "https://github.com/SiarheiRylach/utils_for_tests#readme"
+}
