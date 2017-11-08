@@ -26,7 +26,7 @@ module.exports = {
         browser.takeScreenshot().then((screen)=>{
             let date = new Date().toLocaleString("en").replace(/[/:\s,]/g, '');
             let filename = './screenshot/' + date + '.png';
-            fs.writeFile(filename, screen, 'base64', function(err) {
+            fs.writeFileSync(filename, screen, 'base64', function(err) {
                 if(err) {
                     throw (err);
                 }
