@@ -2,7 +2,7 @@
    Some methods for tests
   
 ***Getting Started***</br>
-   Add in package.json this and after you can use this library via require:
+   Add in package.json to dependecies:
    
     "utils_for_tests": "https://github.com/SiarheiRylach/utils_for_tests.git"
 
