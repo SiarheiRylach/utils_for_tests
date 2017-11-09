@@ -4,12 +4,35 @@ const fs = require('fs');
 const shell = require('shelljs');
 
 module.exports = {
+    /**
+     * Change color of element to red
+     * @param elem
+     */
     highlightSuccess: function (elem) {
         browser.executeScript('arguments[0].style.backgroundColor = "#00ff00"' , elem);
     },
 
+    /**
+     * Change color of element to green
+     * @param elem
+     */
     highlightFail: function (elem) {
         browser.executeScript('arguments[0].style.backgroundColor = "#F20800"' , elem);
+    },
+
+    /**
+     * highlight and after makes screenshot
+     * @param elem - elem to change color
+     * @param isSuccess - bool elem, false - highlightFail, true - highlightSuccess
+     */
+    highlightPlusScreen: function (elem, isSuccess) {
+        if(isSuccess){
+            this.highlightSuccess(elem);
+        }else {
+            this.highlightFail(elem);
+        }
+
+        return this.createScreenshot();
     },
 
     createScreenshot: function () {
