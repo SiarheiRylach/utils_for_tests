@@ -15,7 +15,7 @@ module.exports = {
     createScreenshot: function () {
         utils.createDir('./screenshot/');
 
-        return new Promise(()=>{
+        return new Promise((resolve, reject)=>{
             browser.takeScreenshot().then((screen)=>{
                 let date = new Date().toLocaleString("en").replace(/[/:\s,]/g, '');
                 let filename = './screenshot/' + date + '.png';
