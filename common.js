@@ -13,21 +13,20 @@ module.exports = {
     },
 
     createScreenshot: function () {
-        utils.createDir('./screenshot/')
-            .then(()=>{
-                return new Promise(()=>{
-                    browser.takeScreenshot().then((screen)=>{
-                        let date = new Date().toLocaleString("en").replace(/[/:\s,]/g, '');
-                        let filename = './screenshot/' + date + '.png';
-                        fs.writeFile(filename, screen, 'base64', function(err) {
-                            if(err) {
-                                reject(err);
-                            }
-                            resolve();
-                        });
-                    });
+        utils.createDir('./screenshot/');
+
+        return new Promise(()=>{
+            browser.takeScreenshot().then((screen)=>{
+                let date = new Date().toLocaleString("en").replace(/[/:\s,]/g, '');
+                let filename = './screenshot/' + date + '.png';
+                fs.writeFile(filename, screen, 'base64', function(err) {
+                    if(err) {
+                        reject(err);
+                    }
+                    resolve();
                 });
             });
+        });
     },
 
     /**
@@ -41,6 +40,5 @@ module.exports = {
         }
 
     }
-
 
 };
