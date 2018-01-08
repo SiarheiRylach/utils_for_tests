@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/SiarheiRylach/utils_for_tests/issues"
   },
-  "homepage": "https://github.com/SiarheiRylach/utils_for_tests#readme",
-  "dependencies": {
-    "shelljs": "^0.7.8"
-  }
+  "homepage": "https://github.com/SiarheiRylach/utils_for_tests#readme"
 }

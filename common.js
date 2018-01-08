@@ -1,7 +1,6 @@
 "use strict";
 
 const fs = require('fs');
-const shell = require('shelljs');
 
 module.exports = {
     /**
@@ -53,15 +52,14 @@ module.exports = {
     },
 
     /**
-     * create all folders for path
-     * @param absolutePath
-     * @returns {Promise}
+     * if folder doesn't exist, it will create this
+     * @param path
      */
-    createDir: function (absolutePath) {
-        if (!fs.existsSync(absolutePath)) {
-            shell.mkdir('-p', absolutePath);
+    createDir: function (path) {
+        if (!fs.existsSync(path)){
+            fs.mkdirSync(path);
         }
+    },
 
-    }
 
 };
