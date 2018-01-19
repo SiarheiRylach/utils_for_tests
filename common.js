@@ -52,7 +52,7 @@ module.exports = {
     },
 
     /**
-     * if folder doesn't exist, it will create this
+     * if folder doesn't exist, it will create
      * @param path
      */
     createDir: function (path) {
